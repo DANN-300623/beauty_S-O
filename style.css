@@ -164,7 +164,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 @media(max-width:900px){.price{grid-template-columns:1fr;gap:0}.price .pg+.pg{margin-top:44px}.price .pg:nth-child(n+3){margin-top:44px}}
 
 h1 span{display:block}
-.hero{background-image:linear-gradient(90deg,rgba(251,248,242,.97) 0%,rgba(251,248,242,.92) 42%,rgba(251,248,242,.6) 100%),url(https://images.pexels.com/photos/8490089/pexels-photo-8490089.jpeg?auto=compress&cs=tinysrgb&w=1600);background-size:cover;background-position:center}
+.hero{background-image:linear-gradient(90deg,rgba(251,248,242,.96) 0%,rgba(251,248,242,.9) 45%,rgba(251,248,242,.62) 100%),url(img/s4.webp);background-size:cover;background-position:center}
 
 
 .ftr .made{display:inline-flex;align-items:baseline;gap:10px;text-decoration:none;color:rgba(251,248,242,.6);font-size:13px;padding:6px 0}
@@ -174,3 +174,9 @@ h1 span{display:block}
 .ftr .made:hover .wm{border-color:#E4573D}
 @media(max-width:760px){.ftr{padding-bottom:92px}}
 @media(max-width:520px){.ftr .wrap{flex-direction:column;align-items:flex-start;gap:20px}}
+
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.gal figure{margin:0;position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid rgba(176,138,68,.5);background:#E9DFC9}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:14px;bottom:14px;background:var(--cream);color:var(--green2);font-size:13.5px;font-weight:600;letter-spacing:.04em;padding:7px 13px}
+@media(max-width:700px){.gal{grid-template-columns:1fr;gap:16px;margin-top:32px}}

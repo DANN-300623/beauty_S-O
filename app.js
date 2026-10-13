@@ -31,3 +31,9 @@ if(j&&j.ok){msg.textContent='Hvala, poruka je poslata. Javićemo Vam se.';msg.cl
 btn.disabled=false;
 });
 }
+const jl=document.querySelectorAll('.jump a');
+if(jl.length&&'IntersectionObserver' in window){
+const mp={};jl.forEach(a=>{const t=document.getElementById(a.getAttribute('href').slice(1));if(t)mp[t.id]=a});
+const jo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){jl.forEach(a=>a.classList.remove('on'));const a=mp[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-160px 0px -55% 0px'});
+Object.keys(mp).forEach(id=>jo.observe(document.getElementById(id)));
+}

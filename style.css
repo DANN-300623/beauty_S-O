@@ -336,3 +336,4 @@ button[disabled]{opacity:.65;cursor:wait}
 .hnote p{margin:0}
 .hnote p+p{margin-top:6px}
 @media(max-width:520px){.note{font-size:14px;padding:9px 46px 9px 14px;text-align:left;justify-content:flex-start}}
+.price h2.grp{line-height:1.7;letter-spacing:normal;text-wrap:wrap}

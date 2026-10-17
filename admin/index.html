@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="format-detection" content="telephone=no, date=no, address=no">
+<title>Admin – Beauty S&amp;O</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="top"><span class="logo">Beauty S<i>&amp;</i>O</span><span class="tag">Admin</span><button type="button" class="link" id="odjava" hidden>Odjava</button></header>
+<main>
+<p class="cfg" id="cfg" hidden>Admin panel još nije povezan sa skriptom (API_URL u admin/admin.js je prazan). Pogledajte UPUTSTVO.md.</p>
+
+<section class="box" id="v-login" hidden>
+<h1>Prijava</h1>
+<form id="f-login" novalidate>
+<label for="l-loz">Lozinka</label>
+<input type="password" id="l-loz" autocomplete="current-password" required>
+<button class="btn" type="submit">Prijavi se</button>
+<p class="msg" role="status" aria-live="polite"></p>
+</form>
+<button type="button" class="link" id="zab">Zaboravili ste lozinku?</button>
+<p class="msg" id="zab-msg" role="status" aria-live="polite"></p>
+</section>
+
+<section class="box" id="v-reset" hidden>
+<h1>Nova lozinka</h1>
+<form id="f-reset" novalidate>
+<label for="r-nova">Nova lozinka (najmanje 8 znakova)</label>
+<input type="password" id="r-nova" autocomplete="new-password" minlength="8" required>
+<label for="r-nova2">Ponovite novu lozinku</label>
+<input type="password" id="r-nova2" autocomplete="new-password" minlength="8" required>
+<button class="btn" type="submit">Sačuvaj lozinku</button>
+<p class="msg" role="status" aria-live="polite"></p>
+</form>
+</section>
+
+<div id="v-panel" hidden>
+<section class="box">
+<h1>Obaveštenja na sajtu</h1>
+<p class="hint">Obaveštenje se prikazuje kao traka na vrhu sajta i ispod radnog vremena, samo u izabranom periodu. Primer: „Od 31. decembra do 2. januara salon ne radi. Srećni praznici!“</p>
+<form id="f-dodaj" novalidate>
+<label for="o-tekst">Tekst obaveštenja</label>
+<textarea id="o-tekst" maxlength="300" rows="3" required></textarea>
+<p class="count"><span id="o-br">0</span>/300</p>
+<div class="two">
+<div><label for="o-od">Prikazuj od</label><input type="date" id="o-od" required></div>
+<div><label for="o-do">Prikazuj do (uključujući taj dan)</label><input type="date" id="o-do" required></div>
+</div>
+<button class="btn" type="submit">Dodaj obaveštenje</button>
+<p class="msg" role="status" aria-live="polite"></p>
+</form>
+<h2>Sva obaveštenja</h2>
+<ul class="list" id="lista"></ul>
+<p class="empty" id="prazno" hidden>Nema obaveštenja. Kada nema aktivnih, sajt izgleda kao i inače.</p>
+</section>
+
+<section class="box warn" id="propustene" hidden>
+<h2>Poruke čiji mejl nije stigao</h2>
+<p class="hint">Ove poruke su sačuvane u tabeli, ali obaveštenje Vama mejlom nije poslato. Javite se klijentima direktno.</p>
+<ul class="list" id="prop-lista"></ul>
+</section>
+
+<section class="box">
+<h2>Promena lozinke</h2>
+<form id="f-sifra" novalidate>
+<label for="s-stara">Trenutna lozinka</label>
+<input type="password" id="s-stara" autocomplete="current-password" required>
+<label for="s-nova">Nova lozinka (najmanje 8 znakova)</label>
+<input type="password" id="s-nova" autocomplete="new-password" minlength="8" required>
+<label for="s-nova2">Ponovite novu lozinku</label>
+<input type="password" id="s-nova2" autocomplete="new-password" minlength="8" required>
+<button class="btn" type="submit">Promeni lozinku</button>
+<p class="msg" role="status" aria-live="polite"></p>
+</form>
+</section>
+</div>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

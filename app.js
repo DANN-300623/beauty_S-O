@@ -1,4 +1,4 @@
-const SCRIPT_URL='';
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwBduiRA5yoGNyCkOJgpcg6xOLpyVVh6jTwUqgbQNMpXQmC2dE-iXyvkkU682ujJ4GSXA/exec';
 const burger=document.getElementById('burger');
 const nav=document.getElementById('nav');
 if(burger&&nav){

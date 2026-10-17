@@ -1,4 +1,4 @@
-const API_URL='';
+const API_URL='https://script.google.com/macros/s/AKfycbwBduiRA5yoGNyCkOJgpcg6xOLpyVVh6jTwUqgbQNMpXQmC2dE-iXyvkkU682ujJ4GSXA/exec';
 const $=id=>document.getElementById(id);
 const ss={get:k=>{try{return sessionStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(e){}},del:k=>{try{sessionStorage.removeItem(k)}catch(e){}}};
 let token=ss.get('bso-t')||'';

@@ -44,6 +44,7 @@
 <h1>Obaveštenja na sajtu</h1>
 <p class="hint">Obaveštenje se prikazuje kao traka na vrhu sajta i ispod radnog vremena, samo u izabranom periodu. Primer: „Od 31. decembra do 2. januara salon ne radi. Srećni praznici!“</p>
 <form id="f-dodaj" novalidate>
+<h2 class="fh" id="o-naslov">Novo obaveštenje</h2>
 <label for="o-tekst">Tekst obaveštenja</label>
 <textarea id="o-tekst" maxlength="300" rows="3" required></textarea>
 <p class="count"><span id="o-br">0</span>/300</p>
@@ -52,6 +53,7 @@
 <div><label for="o-do">Prikazuj do (uključujući taj dan)</label><input type="date" id="o-do" required></div>
 </div>
 <button class="btn" type="submit">Dodaj obaveštenje</button>
+<button class="btn ghost" type="button" id="o-odustani" hidden>Odustani</button>
 <p class="msg" role="status" aria-live="polite"></p>
 </form>
 <h2>Sva obaveštenja</h2>
